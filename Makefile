@@ -14,12 +14,12 @@ CFLAGS  = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -std=c99
 LDFLAGS = -mmcu=$(MCU)
 
 # === Sources ===
-SRC     = main.c
+SRC     = main.c OLED.c I2C.c
 OBJ     = $(SRC:.c=.o)
 
 # === Programmer Settings (adjust for your setup) ===
 PROGRAMMER = arduino
-PORT       = COM7        # Change to your serial port (e.g. /dev/ttyUSB0 on Linux)
+PORT       = COM5        # Change to your serial port (e.g. /dev/ttyUSB0 on Linux)
 BAUDRATE   = 115200
 
 # === Rules ===
